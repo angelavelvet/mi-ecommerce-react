@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Termo Autorrefrigerante 1L",
+    "precio": 45000,
+    "descripcion": "Ideal para mantener el agua caliente para el mate por 24 horas. Acero inoxidable de alta resistencia.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 2,
+    "nombre": "Mate de Camionero de Alpaca",
+    "precio": 28000,
+    "descripcion": "Mate de calabaza forrado en cuero legítimo con virola de alpaca reforzada.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 3,
+    "nombre": "Bombilla de Acero Inoxidable",
+    "precio": 8500,
+    "descripcion": "Resistente a altas temperaturas, con filtro desarmable de fácil limpieza.",
+    "categoria": "bazar"
+  }
+]
