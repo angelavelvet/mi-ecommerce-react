@@ -29,4 +29,4 @@ Es una tienda virtual de productos regionales y bazar. El catálogo actual inclu
 
 
 ## 🔗 Enlaces del Proyecto
-* **Sitio web en vivo (Netlify):** [Visitar Tienda](https://netlify.app)
+* **Sitio web en vivo (Netlify):** [Visitar Tienda](https://graceful-pudding-1db923.netlify.app/carrito)
