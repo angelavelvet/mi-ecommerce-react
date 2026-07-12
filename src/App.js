@@ -1,81 +1,119 @@
 import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import { CartProvider, CartContext } from './CartContext';
+import { AuthProvider } from './context/AuthContext';
+import { ProductProvider, useProducts } from './context/ProductContext';
 import Layout from './components/Layout';
-import productosData from './productos.json'; // Importación directa del catálogo desde src
+import ProtectedRoute from './components/ProtectedRoute';
+import Spinner from './components/Spinner';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AdminPanel from './pages/AdminPanel';
+import './App.css';
 
-// 1. Vista de Inicio (Home)
 const Inicio = () => (
-  <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-    <h2>¡Bienvenidos a nuestra Tienda! 🇦🇷</h2>
-    <p>Explorá nuestro catálogo con los mejores productos locales.</p>
+  <div className="hero">
+    <div className="hero-icon">🧉</div>
+    <h2>Bienvenidos a Bazar Nacional</h2>
+    <p>Mates, termos y bombillas de fabricación argentina, elegidos con onda para acompañarte todos los días.</p>
+    <Link to="/productos" className="hero-cta">Ver catálogo</Link>
   </div>
 );
 
-// 2. Vista de Catálogo (Muestra las tarjetas de los productos)
 const Productos = () => {
+  const { products, loading, error } = useProducts();
+
+  if (loading) return <Spinner mensaje="Cargando catálogo..." />;
+  if (error) return <p className="auth-error">{error}</p>;
+
   return (
-    <div style={{ padding: '20px 0' }}>
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '20px' }}>
-        {productosData.map((prod) => (
-          <div key={prod.id} style={{ border: '1px solid #ccc', padding: '15px', borderRadius: '8px', width: '220px', background: '#fff' }}>
-            <h3 style={{ margin: '0 0 10px 0', fontSize: '18px' }}>{prod.nombre}</h3>
-            <p style={{ fontWeight: 'bold', color: '#28a745', fontSize: '16px' }}>${prod.precio.toLocaleString('es-AR')} ARS</p>
-            <Link to={`/producto/${prod.id}`} style={{ display: 'inline-block', marginTop: '10px', background: '#007bff', color: '#fff', padding: '8px 12px', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
-              Ver Detalle
-            </Link>
-          </div>
-        ))}
-      </div>
+    <div>
+      {products.length === 0 ? (
+        <p>Todavía no hay productos cargados en el catálogo.</p>
+      ) : (
+        <div className="product-grid">
+          {products.map((prod) => (
+            <div key={prod.id} className="product-card">
+              <h3>{prod.nombre}</h3>
+              <p className="product-price">${Number(prod.precio).toLocaleString('es-AR')} ARS</p>
+              <Link to={`/producto/${prod.id}`} className="product-detail-btn">
+                Ver Detalle
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-// 3. Vista de Detalle de Producto (/producto/:id)
 const ProductoDetalle = () => {
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
+  const { products, loading } = useProducts();
   const [cantidad, setCantidad] = useState(1);
 
-  const producto = productosData.find((item) => item.id === parseInt(id));
+  if (loading) return <Spinner mensaje="Cargando producto..." />;
 
-  if (!producto) return <p>Buscando producto...</p>;
+  const producto = products.find((item) => item.id === id);
+
+  if (!producto) return <p>No encontramos ese producto.</p>;
 
   return (
-    <div style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '8px', maxWidth: '500px', margin: '20px auto', background: '#f9f9f9' }}>
+    <div style={{ border: '1px solid var(--color-border)', padding: '20px', borderRadius: 'var(--radius)', maxWidth: '500px', margin: '20px auto', background: 'var(--color-surface)', boxShadow: 'var(--shadow)' }}>
       <h2>{producto.nombre}</h2>
-      <p style={{ margin: '15px 0', color: '#555' }}>{producto.descripcion}</p>
-      <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#28a745' }}>${producto.precio.toLocaleString('es-AR')} ARS</p>
-      
+      <p style={{ margin: '15px 0', color: 'var(--color-text-light)' }}>{producto.descripcion}</p>
+      <p style={{ fontSize: '20px', fontWeight: 'bold', color: 'var(--color-primary-dark)' }}>${Number(producto.precio).toLocaleString('es-AR')} ARS</p>
+
       <div style={{ margin: '20px 0', display: 'flex', alignItems: 'center', gap: '15px' }}>
         <button onClick={() => cantidad > 1 && setCantidad(cantidad - 1)} style={{ padding: '5px 10px', cursor: 'pointer' }}>-</button>
         <span style={{ fontSize: '16px', fontWeight: 'bold' }}>{cantidad}</span>
         <button onClick={() => setCantidad(cantidad + 1)} style={{ padding: '5px 10px', cursor: 'pointer' }}>+</button>
       </div>
-      
-      <button onClick={() => addToCart(producto, cantidad)} style={{ background: '#28a745', color: '#fff', border: 'none', padding: '10px 15px', borderRadius: '5px', cursor: 'pointer', width: '100%', fontWeight: 'bold' }}>
+
+      <button onClick={() => addToCart(producto, cantidad)} className="btn btn-primary" style={{ width: '100%' }}>
         Agregar al Carrito ({cantidad})
       </button>
     </div>
   );
 };
 
-// 4. Vista del Carrito (/carrito)
 const CarritoView = () => {
-  const { cart, removeItem, clearCart, totalPrice } = useContext(CartContext);
+  const { cart, removeItem, clearCart, subtotal, totalPrice, cupon, cuponError, aplicarCupon, quitarCupon } = useContext(CartContext);
+  const [codigoCupon, setCodigoCupon] = useState('');
+
+  const handleAplicarCupon = (e) => {
+    e.preventDefault();
+    aplicarCupon(codigoCupon);
+  };
 
   return (
     <div>
       <h2>Tu Carrito</h2>
       {cart.length === 0 ? <p>El carrito está vacío.</p> : (
         <div>
-          <button onClick={clearCart} style={{ background: '#dc3545', color: '#fff', border: 'none', padding: '6px 10px', borderRadius: '5px', marginBottom: '15px', cursor: 'pointer' }}>Vaciar Carrito</button>
+          <button onClick={clearCart} className="btn btn-danger" style={{ marginBottom: '15px' }}>Vaciar Carrito</button>
           {cart.map((item) => (
-            <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid #eee', alignItems: 'center' }}>
+            <div key={item.id} className="cart-item-row">
               <div><h4>{item.nombre} (x{item.quantity})</h4></div>
-              <button onClick={() => removeItem(item.id)} style={{ background: 'none', border: 'none', color: '#dc3545', cursor: 'pointer', fontWeight: 'bold' }}>Quitar</button>
+              <button onClick={() => removeItem(item.id)} className="btn btn-secondary">Quitar</button>
             </div>
           ))}
+
+          <form className="coupon-box" onSubmit={handleAplicarCupon}>
+            <input
+              type="text"
+              placeholder="Código de cupón"
+              value={codigoCupon}
+              onChange={(e) => setCodigoCupon(e.target.value)}
+            />
+            <button type="submit" className="btn btn-primary">Aplicar</button>
+            {cupon && <button type="button" className="btn btn-secondary" onClick={() => { quitarCupon(); setCodigoCupon(''); }}>Quitar cupón</button>}
+          </form>
+          {cuponError && <p className="coupon-error">{cuponError}</p>}
+          {cupon && <p className="coupon-applied">Cupón "{cupon.codigo}" aplicado: -{cupon.descuento * 100}%</p>}
+
+          <p>Subtotal: ${subtotal().toLocaleString('es-AR')} ARS</p>
           <h3>Total a pagar: ${totalPrice().toLocaleString('es-AR')} ARS</h3>
         </div>
       )}
@@ -83,21 +121,35 @@ const CarritoView = () => {
   );
 };
 
-// Componente principal de la App
 function App() {
   return (
-    <CartProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Inicio />} />
-          <Route path="productos" element={<Productos />} />
-          <Route path="producto/:id" element={<ProductoDetalle />} />
-          <Route path="carrito" element={<CarritoView />} />
-        </Route>
-      </Routes>
-    </CartProvider>
+    <AuthProvider>
+      <ProductProvider>
+        <CartProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Inicio />} />
+                <Route path="productos" element={<Productos />} />
+                <Route path="producto/:id" element={<ProductoDetalle />} />
+                <Route path="carrito" element={<CarritoView />} />
+                <Route path="login" element={<Login />} />
+                <Route path="registro" element={<Register />} />
+                <Route
+                  path="admin"
+                  element={
+                    <ProtectedRoute>
+                      <AdminPanel />
+                    </ProtectedRoute>
+                  }
+                />
+              </Route>
+            </Routes>
+          </Router>
+        </CartProvider>
+      </ProductProvider>
+    </AuthProvider>
   );
 }
 
 export default App;
-

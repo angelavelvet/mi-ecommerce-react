@@ -4,20 +4,153 @@
     "nombre": "Termo Autorrefrigerante 1L",
     "precio": 45000,
     "descripcion": "Ideal para mantener el agua caliente para el mate por 24 horas. Acero inoxidable de alta resistencia.",
-    "categoria": "bazar"
+    "categoria": "termos"
   },
   {
     "id": 2,
     "nombre": "Mate de Camionero de Alpaca",
     "precio": 28000,
     "descripcion": "Mate de calabaza forrado en cuero legítimo con virola de alpaca reforzada.",
-    "categoria": "bazar"
+    "categoria": "mates"
   },
   {
     "id": 3,
     "nombre": "Bombilla de Acero Inoxidable",
     "precio": 8500,
     "descripcion": "Resistente a altas temperaturas, con filtro desarmable de fácil limpieza.",
+    "categoria": "bombillas"
+  },
+  {
+    "id": 4,
+    "nombre": "Mate Imperial de Algarrobo",
+    "precio": 19500,
+    "descripcion": "Tallado en madera de algarrobo, con virola de alpaca. Pieza única de artesanos del norte argentino.",
+    "categoria": "mates"
+  },
+  {
+    "id": 5,
+    "nombre": "Mate Torpedo de Vidrio",
+    "precio": 15900,
+    "descripcion": "Diseño moderno en vidrio templado con base de cuero. Fácil de higienizar.",
+    "categoria": "mates"
+  },
+  {
+    "id": 6,
+    "nombre": "Termo Acero Inoxidable 1.5L Pico Cebador",
+    "precio": 52000,
+    "descripcion": "Pico cebador de precisión para no derramar agua. Mantiene la temperatura hasta 18 horas.",
+    "categoria": "termos"
+  },
+  {
+    "id": 7,
+    "nombre": "Bombilla de Alpaca con Filtro Cuchara",
+    "precio": 12500,
+    "descripcion": "Bombilla clásica de alpaca con filtro tipo cuchara, ideal para yerbas con mucho polvo.",
+    "categoria": "bombillas"
+  },
+  {
+    "id": 8,
+    "nombre": "Yerbera de Acero con Tapa Hermética",
+    "precio": 9800,
+    "descripcion": "Mantiene la yerba fresca y protegida de la humedad. Capacidad para 500g.",
     "categoria": "bazar"
+  },
+  {
+    "id": 9,
+    "nombre": "Azucarera de Acero Inoxidable",
+    "precio": 7200,
+    "descripcion": "Combina con cualquier equipo de mate. Cuchara incluida.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 10,
+    "nombre": "Set Mate + Bombilla + Termo Viaje",
+    "precio": 68000,
+    "descripcion": "Kit completo para llevar el mate a cualquier lado. Incluye bolso térmico.",
+    "categoria": "combos"
+  },
+  {
+    "id": 11,
+    "nombre": "Mate Calabaza Curado Natural",
+    "precio": 11500,
+    "descripcion": "Calabaza curada artesanalmente, lista para usar. Sabor auténtico garantizado.",
+    "categoria": "mates"
+  },
+  {
+    "id": 12,
+    "nombre": "Repasador de Lino Motivo Gauchesco",
+    "precio": 4200,
+    "descripcion": "Repasador 100% algodón con estampa de motivos criollos. Ideal para la mesa de mate.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 13,
+    "nombre": "Bandeja de Madera para Mate",
+    "precio": 13800,
+    "descripcion": "Bandeja artesanal de madera maciza con divisiones para termo, mate y yerbera.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 14,
+    "nombre": "Termo de Vidrio 1L con Funda de Cuero",
+    "precio": 47500,
+    "descripcion": "Interior de vidrio para conservar mejor el sabor del agua, funda de cuero genuino.",
+    "categoria": "termos"
+  },
+  {
+    "id": 15,
+    "nombre": "Mate Camionero Forrado en Cuero Trenzado",
+    "precio": 24500,
+    "descripcion": "Diseño robusto con trenzado artesanal, virola reforzada de alpaca.",
+    "categoria": "mates"
+  },
+  {
+    "id": 16,
+    "nombre": "Bombilla Pico de Loro de Alpaca",
+    "precio": 14200,
+    "descripcion": "Terminación en pico de loro, cómoda para cebar y de fácil limpieza.",
+    "categoria": "bombillas"
+  },
+  {
+    "id": 17,
+    "nombre": "Set de 6 Posavasos de Cuero",
+    "precio": 6300,
+    "descripcion": "Posavasos redondos de cuero repujado con diseños criollos, presentación en caja.",
+    "categoria": "bazar"
+  },
+  {
+    "id": 18,
+    "nombre": "Mate Digital con Termómetro",
+    "precio": 32900,
+    "descripcion": "Mate de acero con termómetro incorporado para controlar la temperatura ideal del agua.",
+    "categoria": "mates"
+  },
+  {
+    "id": 19,
+    "nombre": "Cachavacha (Bolso Térmico para Mate)",
+    "precio": 26800,
+    "descripcion": "Bolso térmico con compartimentos para termo, mate, yerba y bombilla. Correa ajustable.",
+    "categoria": "combos"
+  },
+  {
+    "id": 20,
+    "nombre": "Mate Porrón de Vidrio Esmerilado",
+    "precio": 17200,
+    "descripcion": "Estilo porrón, en vidrio esmerilado con base antideslizante de goma.",
+    "categoria": "mates"
+  },
+  {
+    "id": 21,
+    "nombre": "Set Completo Iniciación al Mate",
+    "precio": 39900,
+    "descripcion": "Mate de calabaza, bombilla de alpaca y yerbera chica: todo lo necesario para arrancar.",
+    "categoria": "combos"
+  },
+  {
+    "id": 22,
+    "nombre": "Termo Pico Cebador Edición Bandera Argentina",
+    "precio": 49900,
+    "descripcion": "Termo de acero inoxidable con estampado celeste y blanco, pico cebador de precisión.",
+    "categoria": "termos"
   }
 ]

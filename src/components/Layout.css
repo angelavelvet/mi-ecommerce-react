@@ -1,0 +1,73 @@
+.site-header {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 28px;
+}
+
+.site-header .tagline {
+  margin: 6px 0 0 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  opacity: 0.85;
+  letter-spacing: 0.3px;
+}
+
+.site-footer {
+  background: var(--color-text);
+  color: #f2ece4;
+  padding: 30px 20px;
+  margin-top: auto;
+}
+
+.site-footer-brand {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.site-footer-brand h3 {
+  color: #fff;
+  margin: 0 0 6px 0;
+}
+
+.site-footer-brand p {
+  margin: 0;
+  color: #cfc3b5;
+  font-size: 14px;
+}
+
+.site-footer-team {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  min-width: 200px;
+}
+
+.team-card h5 {
+  margin: 0 0 4px 0;
+  color: var(--color-accent);
+  font-size: 14px;
+}
+
+.team-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #d8cec2;
+}

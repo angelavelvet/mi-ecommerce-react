@@ -1,0 +1,37 @@
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  max-width: 500px;
+}
+
+.product-form label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.product-form input,
+.product-form textarea {
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.field-error {
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.product-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
