@@ -1,6 +1,6 @@
-# E-Commerce Nacional - Entrega Final React
+# 🧉 Bazar Nacional - Entrega Final React
 
-Tienda online de productos de bazar/regionales argentinos, desarrollada en React. Incluye catálogo dinámico contra Firestore, carrito de compras con Context API, autenticación de usuarios con Firebase Authentication y un panel de administración con CRUD completo de productos.
+Tienda online de mates, termos y productos de bazar regional argentino, desarrollada en React. Incluye catálogo dinámico contra Firestore (22 productos), carrito de compras con Context API, autenticación de usuarios con Firebase Authentication y un panel de administración con CRUD completo de productos.
 
 ---
 
@@ -23,7 +23,7 @@ Para ingresar a `/admin` hace falta una cuenta autenticada. Podés registrar una
 - **Catálogo dinámico:** los productos se leen en tiempo real desde Firestore (`onSnapshot`).
 - **Carrito de compras (Context API):** agregar, quitar y vaciar productos; cálculo de subtotal y total en tiempo real.
 - **Cupones de descuento:** en `/carrito` se puede ingresar un código de cupón (`DESCUENTO10`, `BIENVENIDO15`, `MATE20`) que aplica un porcentaje de descuento sobre el subtotal.
-- **Autenticación (Firebase Auth):** login y registro con email/contraseña. `AuthContext` expone el usuario actual en toda la app.
+- **Autenticación (Firebase Auth):** login, registro y recuperación de contraseña por email. `AuthContext` expone el usuario actual en toda la app.
 - **Rutas protegidas:** `/admin` solo es accesible para usuarios autenticados; si no hay sesión, redirige a `/login`.
 - **CRUD de productos (Firestore):** alta, edición y baja de productos desde el panel de administración, con formulario controlado y validaciones (nombre obligatorio, precio > 0, categoría obligatoria).
 - **Modal de confirmación** antes de eliminar un producto.
@@ -96,7 +96,13 @@ npm run build
 ---
 
 ## 🚀 Despliegue
-El sitio está desplegado en Netlify a partir del branch principal de este repositorio. Para que la app funcione en producción, las mismas variables de entorno de `.env` deben configurarse en **Netlify → Site settings → Environment variables**.
+El sitio está publicado en Netlify vía **Netlify Drop** (subida manual de la carpeta `build`, no hay integración continua con GitHub). Para actualizar el sitio en vivo después de un cambio:
+
+```bash
+npm run build
+```
+
+Y arrastrar la carpeta `build/` generada a la sección **Deploys** del proyecto en Netlify ("Drag and drop your project folder here to deploy new changes"). Como el build se genera localmente con las variables de `.env`, no hace falta configurar variables de entorno del lado de Netlify.
 
 ---
 
@@ -117,8 +123,15 @@ src/
 ├── pages/
 │   ├── Login.jsx, Register.jsx
 │   └── AdminPanel.jsx
+├── utils/
+│   └── firebaseErrors.js    # Traducción de errores de Firebase a mensajes en español
 └── App.js                   # Rutas de la aplicación
+
+scripts/
+└── seedProducts.js          # Carga el catálogo inicial (productos.json) a Firestore
+
+firestore.rules              # Reglas de seguridad sugeridas para Firestore
 ```
 
 ## ✅ Compatibilidad
-Probado en las últimas versiones de Chrome, Firefox y Edge.
+Verificado en Chrome. Se recomienda una prueba rápida en Firefox y Edge antes de la entrega final.
