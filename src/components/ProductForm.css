@@ -29,6 +29,15 @@
   font-size: 13px;
 }
 
+.product-form-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  margin-top: 4px;
+}
+
 .product-form-actions {
   display: flex;
   gap: 10px;

@@ -47,6 +47,19 @@
   font-size: 14px;
 }
 
+.admin-product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-product-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 .admin-product-actions {
   display: flex;
   gap: 8px;

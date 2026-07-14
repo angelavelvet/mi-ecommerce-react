@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ProductForm.css';
 
-const initialState = { nombre: '', precio: '', descripcion: '', categoria: '' };
+const initialState = { nombre: '', precio: '', descripcion: '', categoria: '', imagen: '' };
 
 const ProductForm = ({ productoInicial, onSubmit, onCancel }) => {
   const [valores, setValores] = useState(productoInicial || initialState);
@@ -25,6 +25,9 @@ const ProductForm = ({ productoInicial, onSubmit, onCancel }) => {
     if (!valores.categoria || !valores.categoria.trim()) {
       nuevosErrores.categoria = 'La categoría es obligatoria.';
     }
+    if (!valores.imagen || !valores.imagen.trim()) {
+      nuevosErrores.imagen = 'Pegá la URL de una imagen para el producto.';
+    }
     setErrores(nuevosErrores);
     return Object.keys(nuevosErrores).length === 0;
   };
@@ -40,6 +43,7 @@ const ProductForm = ({ productoInicial, onSubmit, onCancel }) => {
         precio: Number(valores.precio),
         descripcion: valores.descripcion.trim(),
         categoria: valores.categoria.trim(),
+        imagen: valores.imagen.trim(),
       });
       setValores(initialState);
     } finally {
@@ -62,6 +66,19 @@ const ProductForm = ({ productoInicial, onSubmit, onCancel }) => {
       <label htmlFor="categoria">Categoría *</label>
       <input id="categoria" name="categoria" value={valores.categoria} onChange={handleChange} />
       {errores.categoria && <span className="field-error">{errores.categoria}</span>}
+
+      <label htmlFor="imagen">URL de la imagen *</label>
+      <input id="imagen" name="imagen" placeholder="https://..." value={valores.imagen} onChange={handleChange} />
+      {errores.imagen && <span className="field-error">{errores.imagen}</span>}
+      {valores.imagen && (
+        <img
+          src={valores.imagen}
+          alt="Vista previa"
+          className="product-form-preview"
+          onError={(e) => { e.target.style.display = 'none'; }}
+          onLoad={(e) => { e.target.style.display = 'block'; }}
+        />
+      )}
 
       <label htmlFor="descripcion">Descripción</label>
       <textarea id="descripcion" name="descripcion" rows={3} value={valores.descripcion} onChange={handleChange} />

@@ -72,9 +72,12 @@ const AdminPanel = () => {
           {products.length === 0 && <p>Todavía no hay productos cargados.</p>}
           {products.map((prod) => (
             <div key={prod.id} className="admin-product-row">
-              <div>
-                <strong>{prod.nombre}</strong>
-                <span className="admin-product-meta"> — ${Number(prod.precio).toLocaleString('es-AR')} ARS — {prod.categoria}</span>
+              <div className="admin-product-info">
+                {prod.imagen && <img src={prod.imagen} alt={prod.nombre} className="admin-product-thumb" />}
+                <div>
+                  <strong>{prod.nombre}</strong>
+                  <span className="admin-product-meta"> — ${Number(prod.precio).toLocaleString('es-AR')} ARS — {prod.categoria}</span>
+                </div>
               </div>
               <div className="admin-product-actions">
                 <button className="btn btn-secondary" onClick={() => setProductoEditando(prod)}>Editar</button>

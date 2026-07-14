@@ -1,156 +1,178 @@
 [
   {
     "id": 1,
-    "nombre": "Termo Autorrefrigerante 1L",
-    "precio": 45000,
-    "descripcion": "Ideal para mantener el agua caliente para el mate por 24 horas. Acero inoxidable de alta resistencia.",
-    "categoria": "termos"
+    "nombre": "Azucarera de Acero Inoxidable",
+    "precio": 10200,
+    "descripcion": "Combina con cualquier equipo de mate. Cuchara incluida.",
+    "categoria": "bazar",
+    "imagen": "https://down-ar.img.susercontent.com/file/sg-11134201-7req0-m837uo626xt528@resize_w900_nl.webp"
   },
   {
     "id": 2,
-    "nombre": "Mate de Camionero de Alpaca",
-    "precio": 28000,
-    "descripcion": "Mate de calabaza forrado en cuero legítimo con virola de alpaca reforzada.",
-    "categoria": "mates"
-  },
-  {
-    "id": 3,
-    "nombre": "Bombilla de Acero Inoxidable",
-    "precio": 8500,
-    "descripcion": "Resistente a altas temperaturas, con filtro desarmable de fácil limpieza.",
-    "categoria": "bombillas"
-  },
-  {
-    "id": 4,
-    "nombre": "Mate Imperial de Algarrobo",
-    "precio": 19500,
-    "descripcion": "Tallado en madera de algarrobo, con virola de alpaca. Pieza única de artesanos del norte argentino.",
-    "categoria": "mates"
-  },
-  {
-    "id": 5,
-    "nombre": "Mate Torpedo de Vidrio",
-    "precio": 15900,
-    "descripcion": "Diseño moderno en vidrio templado con base de cuero. Fácil de higienizar.",
-    "categoria": "mates"
-  },
-  {
-    "id": 6,
-    "nombre": "Termo Acero Inoxidable 1.5L Pico Cebador",
-    "precio": 52000,
-    "descripcion": "Pico cebador de precisión para no derramar agua. Mantiene la temperatura hasta 18 horas.",
-    "categoria": "termos"
-  },
-  {
-    "id": 7,
-    "nombre": "Bombilla de Alpaca con Filtro Cuchara",
-    "precio": 12500,
-    "descripcion": "Bombilla clásica de alpaca con filtro tipo cuchara, ideal para yerbas con mucho polvo.",
-    "categoria": "bombillas"
-  },
-  {
-    "id": 8,
-    "nombre": "Yerbera de Acero con Tapa Hermética",
-    "precio": 9800,
-    "descripcion": "Mantiene la yerba fresca y protegida de la humedad. Capacidad para 500g.",
-    "categoria": "bazar"
-  },
-  {
-    "id": 9,
-    "nombre": "Azucarera de Acero Inoxidable",
-    "precio": 7200,
-    "descripcion": "Combina con cualquier equipo de mate. Cuchara incluida.",
-    "categoria": "bazar"
-  },
-  {
-    "id": 10,
-    "nombre": "Set Mate + Bombilla + Termo Viaje",
-    "precio": 68000,
-    "descripcion": "Kit completo para llevar el mate a cualquier lado. Incluye bolso térmico.",
-    "categoria": "combos"
-  },
-  {
-    "id": 11,
-    "nombre": "Mate Calabaza Curado Natural",
-    "precio": 11500,
-    "descripcion": "Calabaza curada artesanalmente, lista para usar. Sabor auténtico garantizado.",
-    "categoria": "mates"
-  },
-  {
-    "id": 12,
-    "nombre": "Repasador de Lino Motivo Gauchesco",
-    "precio": 4200,
-    "descripcion": "Repasador 100% algodón con estampa de motivos criollos. Ideal para la mesa de mate.",
-    "categoria": "bazar"
-  },
-  {
-    "id": 13,
     "nombre": "Bandeja de Madera para Mate",
     "precio": 13800,
     "descripcion": "Bandeja artesanal de madera maciza con divisiones para termo, mate y yerbera.",
-    "categoria": "bazar"
+    "categoria": "bazar",
+    "imagen": "https://www.fabricadecuadrosmdp.com/wp-content/uploads/2021/06/BDJ0004.jpeg"
   },
   {
-    "id": 14,
-    "nombre": "Termo de Vidrio 1L con Funda de Cuero",
-    "precio": 47500,
-    "descripcion": "Interior de vidrio para conservar mejor el sabor del agua, funda de cuero genuino.",
-    "categoria": "termos"
-  },
-  {
-    "id": 15,
-    "nombre": "Mate Camionero Forrado en Cuero Trenzado",
-    "precio": 24500,
-    "descripcion": "Diseño robusto con trenzado artesanal, virola reforzada de alpaca.",
-    "categoria": "mates"
-  },
-  {
-    "id": 16,
+    "id": 3,
     "nombre": "Bombilla Pico de Loro de Alpaca",
     "precio": 14200,
     "descripcion": "Terminación en pico de loro, cómoda para cebar y de fácil limpieza.",
-    "categoria": "bombillas"
+    "categoria": "bombillas",
+    "imagen": "https://matesibarra.com/wp-content/uploads/2021/06/2doCatalogoAbril53.jpg"
   },
   {
-    "id": 17,
-    "nombre": "Set de 6 Posavasos de Cuero",
-    "precio": 6300,
-    "descripcion": "Posavasos redondos de cuero repujado con diseños criollos, presentación en caja.",
-    "categoria": "bazar"
+    "id": 4,
+    "nombre": "Bombilla de Acero Inoxidable",
+    "precio": 8500,
+    "descripcion": "Resistente a altas temperaturas, con filtro desarmable de fácil limpieza.",
+    "categoria": "bombillas",
+    "imagen": "https://maderarte.com.ar/wp-content/uploads/2022/03/BOMBILLAS-ACERO-INOXIDABLES.jpg"
   },
   {
-    "id": 18,
-    "nombre": "Mate Digital con Termómetro",
-    "precio": 32900,
-    "descripcion": "Mate de acero con termómetro incorporado para controlar la temperatura ideal del agua.",
-    "categoria": "mates"
+    "id": 5,
+    "nombre": "Bombilla de Alpaca con Filtro Cuchara",
+    "precio": 12500,
+    "descripcion": "Bombilla clásica de alpaca con filtro tipo cuchara, ideal para yerbas con mucho polvo.",
+    "categoria": "bombillas",
+    "imagen": "https://i0.wp.com/arandu.com.ar/wp-content/uploads/2020/06/30121A-a_web.jpg?fit=800%2C800&ssl=1"
   },
   {
-    "id": 19,
+    "id": 6,
     "nombre": "Cachavacha (Bolso Térmico para Mate)",
     "precio": 26800,
     "descripcion": "Bolso térmico con compartimentos para termo, mate, yerba y bombilla. Correa ajustable.",
-    "categoria": "combos"
+    "categoria": "combos",
+    "imagen": "https://remateaym.com/wp-content/uploads/NEGRO-3.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Mate Calabaza Curado Natural",
+    "precio": 11500,
+    "descripcion": "Calabaza curada artesanalmente, lista para usar. Sabor auténtico garantizado.",
+    "categoria": "mates",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/4-mate_poro.jpg?width=400"
+  },
+  {
+    "id": 8,
+    "nombre": "Mate Camionero Forrado en Cuero Trenzado",
+    "precio": 24500,
+    "descripcion": "Diseño robusto con trenzado artesanal, virola reforzada de alpaca.",
+    "categoria": "mates",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/6-porongo.jpg?width=400"
+  },
+  {
+    "id": 9,
+    "nombre": "Mate Imperial de Algarrobo",
+    "precio": 19500,
+    "descripcion": "Tallado en madera de algarrobo, con virola de alpaca. Pieza única de artesanos del norte argentino.",
+    "categoria": "mates",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/002/027/172/products/imperial-algarrobo-clasico-1-61363da774ebc9d68417799290497404-1024-1024.webp"
+  },
+  {
+    "id": 10,
+    "nombre": "Mate Torpedo Acero Inoxidable Verde",
+    "precio": 15900,
+    "descripcion": "Mate uruguayo con el mate torpedo es de acero inoxidable en un vibrante color verde, acompañando con un diseño moderno y funcional",
+    "categoria": "mates",
+    "imagen": "https://www.deliargentina.com/image/cache/catalog/product/mates/Mates-el-paisito/mate_torpedo_verde_elpaisito-1280x1280.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Mate de Camionero de Alpaca",
+    "precio": 28000,
+    "descripcion": "Mate de calabaza forrado en cuero legítimo con virola de alpaca reforzada.",
+    "categoria": "mates",
+    "imagen": "https://tiendachemate.com.ar/wp-content/uploads/2023/06/Mate_Camionero_BaseAlpaca_1.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Mate de Vidrio Guardapampa Argentino con Posapié",
+    "precio": 17200,
+    "descripcion": "Mate de Vidrio Guardapampa Argentino con Posapié, divertido, fácil de usar sin tener que curarlo.",
+    "categoria": "mates",
+    "imagen": "https://www.deliargentina.com/image/cache/catalog/product/mates/mate-cristal-argentino-para-yerba-mate/goma%20Eva%20y%20guardapampa/mate-vidrio-guardapampa-argentino-1280x1280.jpeg"
+  },
+  {
+    "id": 13,
+    "nombre": "Repasador de Lino Motivo Gauchesco estilo dark",
+    "precio": 4200,
+    "descripcion": "Repasador 100% algodón con estampa de motivos criollo modeno. Ideal para la mesa de mate.",
+    "categoria": "bazar",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_668680-MLA85665590662_062025-F.webp"
+  },
+  {
+    "id": 14,
+    "nombre": "Set Completo Iniciación al Mate",
+    "precio": 39900,
+    "descripcion": "Canasta matera uruguaya de cuero ecologico, termino de un litro de acero inoxidable, mate de acero inoxidable, bombilla de acero inoxidable, yerbera y azucarera de forma de lata",
+    "categoria": "combos",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/002/424/500/products/combo-8-f99f515130ce8e7b1817195158973489-1024-1024.webp?_gl=1*jxj3kg*_ga*NTQyMTU3MjQ5LjE3ODQwNjE2NTU.*_ga_1W3EJ7JP61*czE3ODQwNjE2NTUkbzEkZzAkdDE3ODQwNjE2NTUkajYwJGwwJGgw"
+  },
+  {
+    "id": 15,
+    "nombre": "Set de 6 Posavasos de Cuero",
+    "precio": 6300,
+    "descripcion": "Posavasos redondos de cuero repujado con diseños criollos, presentación en caja.",
+    "categoria": "bazar",
+    "imagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Cork_coaster.jpg?width=400"
+  },
+  {
+    "id": 16,
+    "nombre": "Termo Acero Inox 1300ml + Mate 200 Ml + Bombilla",
+    "precio": 68000,
+    "descripcion": "Kit completo para llevar el mate a cualquier lado.",
+    "categoria": "combos",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_976701-MLA109561645337_032026-F.webp"
+  },
+  {
+    "id": 17,
+    "nombre": "Termo Acero Inoxidable 1.5L Pico Cebador",
+    "precio": 52000,
+    "descripcion": "Pico cebador de precisión para no derramar agua. Mantiene la temperatura hasta 18 horas.",
+    "categoria": "termos",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/131/199/products/chatgpt-image-7-nov-2025-14_03_35-df4a759a47fa29d89117625354555149-1024-1024.webp"
+  },
+  {
+    "id": 18,
+    "nombre": "Termo Autorrefrigerante 1L",
+    "precio": 45000,
+    "descripcion": "Ideal para mantener el agua caliente para el mate por 24 horas. Acero inoxidable de alta resistencia.",
+    "categoria": "termos",
+    "imagen": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRQnIB2v5EGfbjrBBNDRpxDGhaNrzhvpfsFS2UkQ14wT8zKrSN7CTzDxy8wJvajMh7eQkLYCMpVo71wnY3XqmL1cp4mzr1S36ZfX0fwOAk"
+  },
+  {
+    "id": 19,
+    "nombre": "Termo Con Indicador Digital Temperatura Azul Mate",
+    "precio": 32900,
+    "descripcion": "Tapado puede mantener la temperatura por arriba de 50 ºC por cerca de 8 horas. Mantiene la temperatura por arriba de 35 ºC por cerca de 12 horas",
+    "categoria": "mates",
+    "imagen": "https://exitocol.vtexassets.com/arquivos/ids/27028808/termo-con-indicador-digital-temperatura-azul-mate.jpg?v=638774196690970000"
   },
   {
     "id": 20,
-    "nombre": "Mate Porrón de Vidrio Esmerilado",
-    "precio": 17200,
-    "descripcion": "Estilo porrón, en vidrio esmerilado con base antideslizante de goma.",
-    "categoria": "mates"
-  },
-  {
-    "id": 21,
-    "nombre": "Set Completo Iniciación al Mate",
-    "precio": 39900,
-    "descripcion": "Mate de calabaza, bombilla de alpaca y yerbera chica: todo lo necesario para arrancar.",
-    "categoria": "combos"
-  },
-  {
-    "id": 22,
     "nombre": "Termo Pico Cebador Edición Bandera Argentina",
     "precio": 49900,
     "descripcion": "Termo de acero inoxidable con estampado celeste y blanco, pico cebador de precisión.",
-    "categoria": "termos"
+    "categoria": "termos",
+    "imagen": "https://www.lumilagro.com.ar/wp-content/uploads/2022/09/arg-serigrafiado-tapapuesta.webp"
+  },
+  {
+    "id": 21,
+    "nombre": "Termo de Vidrio 1L",
+    "precio": 47500,
+    "descripcion": "Los tradicionales termos Lumilagro nunca pasan de moda. Y el modelo «Terra» presenta un diseño joven y práctico.",
+    "categoria": "termos",
+    "imagen": "https://www.ferreteriadoncarlos.com.ar/wp-content/uploads/2022/03/termo-vidrio-terra-verde-lumilagro-600X600-1-1.webp"
+  },
+  {
+    "id": 22,
+    "nombre": "Yerbera de Acero con Tapa Hermética",
+    "precio": 9800,
+    "descripcion": "Mantiene la yerba fresca y protegida de la humedad. Capacidad para 500g.",
+    "categoria": "bazar",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_641082-MLA96897316352_112025-F.webp"
   }
 ]

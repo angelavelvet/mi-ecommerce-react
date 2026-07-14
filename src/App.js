@@ -34,6 +34,11 @@ const Productos = () => {
         <div className="product-grid">
           {products.map((prod) => (
             <div key={prod.id} className="product-card">
+              {prod.imagen ? (
+                <img src={prod.imagen} alt={prod.nombre} className="product-image" />
+              ) : (
+                <div className="product-image product-image-placeholder">🧉</div>
+              )}
               <h3>{prod.nombre}</h3>
               <p className="product-price">${Number(prod.precio).toLocaleString('es-AR')} ARS</p>
               <Link to={`/producto/${prod.id}`} className="product-detail-btn">
@@ -61,6 +66,9 @@ const ProductoDetalle = () => {
 
   return (
     <div style={{ border: '1px solid var(--color-border)', padding: '20px', borderRadius: 'var(--radius)', maxWidth: '500px', margin: '20px auto', background: 'var(--color-surface)', boxShadow: 'var(--shadow)' }}>
+      {producto.imagen && (
+        <img src={producto.imagen} alt={producto.nombre} className="product-detail-image" />
+      )}
       <h2>{producto.nombre}</h2>
       <p style={{ margin: '15px 0', color: 'var(--color-text-light)' }}>{producto.descripcion}</p>
       <p style={{ fontSize: '20px', fontWeight: 'bold', color: 'var(--color-primary-dark)' }}>${Number(producto.precio).toLocaleString('es-AR')} ARS</p>
@@ -95,7 +103,10 @@ const CarritoView = () => {
           <button onClick={clearCart} className="btn btn-danger" style={{ marginBottom: '15px' }}>Vaciar Carrito</button>
           {cart.map((item) => (
             <div key={item.id} className="cart-item-row">
-              <div><h4>{item.nombre} (x{item.quantity})</h4></div>
+              <div className="cart-item-info">
+                {item.imagen && <img src={item.imagen} alt={item.nombre} className="cart-item-image" />}
+                <h4>{item.nombre} (x{item.quantity})</h4>
+              </div>
               <button onClick={() => removeItem(item.id)} className="btn btn-secondary">Quitar</button>
             </div>
           ))}
